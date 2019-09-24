@@ -33,3 +33,10 @@ add_executable(multitest
 )
 
 add_test(NAME ctest_4 COMMAND multitest)
+
+add_executable(ignore_test
+    ${CMAKE_BINARY_DIR}/ignore_me.cpp
+    ignore_test.cpp
+)
+
+add_test(NAME ctest_5 COMMAND ignore_test)
